@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+</head>
+<body>
+
+<h2> UUID History </h2>
+
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th> Time Stamp </th>
+      <th> UUID </th>
+      <th> Created by </th>
+      <th>Waste Type</th>
+      <th> Weight (Kg)</th>
+      <th> Status </th>
+  </tr>
+
+{% for t,id,by,type,w,s in row1 %}
+
+    <tr>
+
+      <td>{{t}}</td>
+      <td>{{id}}</td>
+      <td>{{by}}</td>>
+      <td>{{type}}</td>
+      <td>{{w}}</td>
+      <td>{{s}}</td>
+
+
+    </tr>
+
+
+{%endfor%}
+
+
+  </table>
+</div>
+
+
+
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th> Time Stamp </th>
+      <th> UUID </th>
+      <th> To </th>
+      <th> Waste Type </th>
+      <th> Weight (Kg)</th>
+      <th> Status </th>
+  </tr>
+{% for t,id,to,type,w,s in row2 %}
+
+    <tr>
+
+      <td>{{t}}</td>
+      <td>{{id}}</td>
+      <td>{{to}}</td>
+      <td>{{type}}</td>
+      <td>{{w}}</td>
+      <td>{{s}}</td>
+
+
+    </tr>
+
+
+{%endfor%}
+
+
+  </table>
+</div>
+
+
+
+
+</body>
+</html>
